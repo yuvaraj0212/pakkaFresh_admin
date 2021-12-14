@@ -22,7 +22,7 @@ const HeaderDashboard = ({
             <div className="header__right">
                 <Link href="/login">
                     <a className="header__site-link" onClick={logout}>
-                        <span>View your store</span>
+                        {/* <span>View your store</span> */}
                         <i className="icon-exit"></i>
                     </a>
                 </Link>

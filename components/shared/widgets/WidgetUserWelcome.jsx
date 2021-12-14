@@ -27,7 +27,7 @@ const WidgetUserWelcome = () => {
     return (data ? (
         <div className="ps-block--user-wellcome">
             <div className="ps-block__left">
-                <img src="/img/user/admin.jpg" alt="" />
+                <img width='90px' src="/img/webrixte logo.png" alt="" />
             </div>
             <div className="ps-block__right">
                 <p>

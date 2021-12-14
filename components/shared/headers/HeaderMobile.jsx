@@ -1,12 +1,16 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { toggleDrawerMenu } from '~/store/app/action';
-
+import Link from 'next/link';
 const HeaderMobile = ({ isDrawerMenu }) => {
     const dispatch = useDispatch();
     const handleOpenDrawer = () => {
         dispatch(toggleDrawerMenu(true));
     };
+    const logout = () => {
+        sessionStorage.clear();
+        return router.push("/login");
+    }
     return (
         <header className="header--mobile">
             <div className="header__left">
@@ -16,14 +20,17 @@ const HeaderMobile = ({ isDrawerMenu }) => {
                 <img src="" alt="" />
             </div>
             <div className="header__center">
-                <a className="ps-logo" href="#">
-                    <img src="/img/logo.png" alt="" />
-                </a>
+                <div style={{ paddingLeft: '11px', color: '#f55d2c', fontSize: '236%' }}>
+                    𝔽𝕒𝕣𝕞<span style={{ color: '#9fd040' }}> 𝟞𝟛</span>
+                </div>
             </div>
             <div className="header__right">
-                <a className="header__site-link" href="#">
-                    <i className="icon-exit-right"></i>
-                </a>
+                <Link href="/login">
+                    <a className="header__site-link" onClick={logout}>
+                        {/* <span>View your store</span> */}
+                        <i className="icon-exit"></i>
+                    </a>
+                </Link>
             </div>
         </header>
     );

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import FooterCopyright from '~/components/shared/footers/FooterCopyright';
 import MenuSidebar from '~/components/shared/menus/MenuSidebar';
 import WidgetEarningSidebar from '~/components/shared/widgets/WidgetEarningSidebar';
 import WidgetUserWelcome from '~/components/shared/widgets/WidgetUserWelcome';
+import Link from 'next/link';
 import HeaderDashboard from '~/components/shared/headers/HeaderDashboard';
 
 const ContainerDefault = ({ children, title }) => {
@@ -13,9 +14,13 @@ const ContainerDefault = ({ children, title }) => {
     } else {
         titleView = process.env.title + ' | ' + process.env.titleDescription;
     }
-
-    return (
-        <div className="martfury-admin">
+    const [data, setData] = useState('');
+    useEffect(() => {
+        let data = JSON.parse(sessionStorage.getItem('token'))
+        setData(data);
+    }, []);
+    return (<>
+        {data ?<div className="martfury-admin">
             <Head>
                 <title>{titleView}</title>
             </Head>
@@ -39,7 +44,25 @@ const ContainerDefault = ({ children, title }) => {
                 <div className="ps-main__wrapper">{children}</div>
             </main>
         </div>
-    );
+        :
+        <div className="ps-page--404">
+            <figure className="ps-block--notfound">
+                <h3>Ohh! Page not found</h3>
+                <p>
+                    Please login !! . <br />
+                </p>
+                <p>
+                    <strong className="mr-2">Return to</strong>
+                    <Link href="/">
+                        <a className="ps-btn ps-btn--black ps-btn--rounded ps-btn--sm">
+                            login
+                        </a>
+                    </Link>
+                </p>
+            </figure>
+        </div>
+    }
+    </>);
 };
 
 export default ContainerDefault;
