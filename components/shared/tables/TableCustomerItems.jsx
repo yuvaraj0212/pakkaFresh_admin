@@ -25,7 +25,7 @@ const TableCustomerItems = ({customers,search}) => {
                 </td>
                 <td>{item.email}</td>
                 <td>{item.phone}</td>
-                <td>{item.roles[0].rolename}</td>
+                {/* <td>{item.roles[0].rolename}</td> */}
                 {/* <td>
                     <DropdownAction />
                 </td> */}
@@ -41,7 +41,7 @@ const TableCustomerItems = ({customers,search}) => {
                         <th>Name</th>
                         <th>Email Id</th>
                         <th>Phone Number</th>
-                        <th>Role</th>
+                        {/* <th>Role</th> */}
                         <th></th>
                     </tr>
                 </thead>

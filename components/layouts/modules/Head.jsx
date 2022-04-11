@@ -17,11 +17,8 @@ const StyleSheets = () => (
             name="description"
             content="Martfury - React eCommerce Template"
         />
-        <title>Martfury | pandiyan Admin Template</title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext"
-            rel="stylesheet"
-        />
+       <title>Farm 63</title>
+        <link rel="icon" type=" image/png" href="public/img/favicon.png"/>
         {/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> */}
         <link
             rel="stylesheet"

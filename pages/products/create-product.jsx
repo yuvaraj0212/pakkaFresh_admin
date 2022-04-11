@@ -84,7 +84,7 @@ const CreateProductPage = () => {
                                                     className="form-control  w-md-75"
                                                     type="text"
                                                     placeholder="productName"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>
@@ -104,7 +104,7 @@ const CreateProductPage = () => {
                                                     className="form-control"
                                                     type="text"
                                                     placeholder="productCode"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>
@@ -124,7 +124,7 @@ const CreateProductPage = () => {
                                                     className="form-control"
                                                     type="number"
                                                     placeholder="price"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>
@@ -143,7 +143,7 @@ const CreateProductPage = () => {
                                                     className="form-control"
                                                     type="text"
                                                     placeholder="details"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>
@@ -163,7 +163,7 @@ const CreateProductPage = () => {
                                                     className="form-control"
                                                     type="number"
                                                     placeholder="discount"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>
@@ -183,7 +183,7 @@ const CreateProductPage = () => {
                                                     className="form-control"
                                                     type="text"
                                                     placeholder="description"
-
+                                                    autoComplete="off"
                                                 />
                                             </Form.Item>
                                         </div>

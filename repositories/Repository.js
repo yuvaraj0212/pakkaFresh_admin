@@ -1,6 +1,6 @@
 import axios from 'axios';
 export const isGrapql = true;
-const baseDomain = 'http://localhost:1337';
+const baseDomain = 'http://localhost:8899';
 /*const baseDomain = 'http://45.76.97.89:1337';*/
 const authorization_prefix = 'Bearer ';
 export const customHeaders = {

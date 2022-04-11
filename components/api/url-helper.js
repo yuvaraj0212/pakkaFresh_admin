@@ -1,7 +1,8 @@
-
 import axios from "axios";
 
-const baseUrl = 'http://13.235.132.111/pakkaFresh';
+// const baseUrl = 'http://localhost:8899';
+
+const baseUrl = 'http://35.154.162.39:8080/farm';
 
 export const registerUser = (data) => axios.post(`${baseUrl}/signup`, data);
 
